@@ -63,14 +63,14 @@
 ## 🚀 快速开始 Quick Start
 
 ### 🌐 在线访问 Online Access
-无需下载，直接访问： **https://aether-1013.github.io**
+无需下载，直接访问： **https://aether-1013.github.io/Smooth-Clock-Furina-Style/**
 
-No download needed, visit directly: **https://aether-1013.github.io**
+No download needed, visit directly: **https://aether-1013.github.io/Smooth-Clock-Furina-Style/**
 
 ### 💻 本地运行 Local Development
 ```bash
 # 克隆项目 Clone the project
-git clone https://github.com/Aether-1013/genshin-clock.git
+https://github.com/Aether-1013/Smooth-Clock-Furina-Style.git
 
 # 进入项目目录 Enter project directory
 cd genshin-clock
@@ -213,3 +213,4 @@ a:hover {
 }
 
 </style>
+
