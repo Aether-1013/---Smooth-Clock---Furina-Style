@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <h3>✨ <a href="https://aether-1013.github.io/genshin-clock" target="_blank">🚀 快速访问 Quick Access</a> ✨</h3>
+  <h3>✨ <a href="https://aether-1013.github.io/Smooth-Clock-Furina-Style/" target="_blank">🚀 快速访问 Quick Access</a> ✨</h3>
 </div>
 
 
@@ -211,4 +211,5 @@ a:hover {
   color: #01579b;
   text-decoration: underline;
 }
+
 </style>
