@@ -1,4 +1,4 @@
-#  丝滑时钟 - 芙宁娜风格 Smooth Clock - Furina Style
+#  简约时钟 - 芙宁娜风格 simple Clock - Furina Style
 
 <div align="center">
   <img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status">
@@ -213,4 +213,5 @@ a:hover {
 }
 
 </style>
+
 
