@@ -153,17 +153,18 @@
             transform-origin: center 142px;
         }
 
-        .clock-mark:nth-child(17) { transform: translateX(-50%) rotate(30deg); }
-        .clock-mark:nth-child(18) { transform: translateX(-50%) rotate(60deg); }
-        .clock-mark:nth-child(19) { transform: translateX(-50%) rotate(90deg); }
-        .clock-mark:nth-child(20) { transform: translateX(-50%) rotate(120deg); }
-        .clock-mark:nth-child(21) { transform: translateX(-50%) rotate(150deg); }
-        .clock-mark:nth-child(22) { transform: translateX(-50%) rotate(180deg); }
-        .clock-mark:nth-child(23) { transform: translateX(-50%) rotate(210deg); }
-        .clock-mark:nth-child(24) { transform: translateX(-50%) rotate(240deg); }
-        .clock-mark:nth-child(25) { transform: translateX(-50%) rotate(270deg); }
-        .clock-mark:nth-child(26) { transform: translateX(-50%) rotate(300deg); }
-        .clock-mark:nth-child(27) { transform: translateX(-50%) rotate(330deg); }
+        .clock-mark:nth-child(13) { transform: translateX(-50%) rotate(0deg); }
+.clock-mark:nth-child(14) { transform: translateX(-50%) rotate(30deg); }
+.clock-mark:nth-child(15) { transform: translateX(-50%) rotate(60deg); }
+.clock-mark:nth-child(16) { transform: translateX(-50%) rotate(90deg); }
+.clock-mark:nth-child(17) { transform: translateX(-50%) rotate(120deg); }
+.clock-mark:nth-child(18) { transform: translateX(-50%) rotate(150deg); }
+.clock-mark:nth-child(19) { transform: translateX(-50%) rotate(180deg); }
+.clock-mark:nth-child(20) { transform: translateX(-50%) rotate(210deg); }
+.clock-mark:nth-child(21) { transform: translateX(-50%) rotate(240deg); }
+.clock-mark:nth-child(22) { transform: translateX(-50%) rotate(270deg); }
+.clock-mark:nth-child(23) { transform: translateX(-50%) rotate(300deg); }
+.clock-mark:nth-child(24) { transform: translateX(-50%) rotate(330deg); }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -738,9 +739,9 @@
                     </div>
                     
                     <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
-                        <button class="control-btn" id="prevBtn">◀</button>
-                        <button class="control-btn play-pause" id="playPauseBtn">❚❚</button>
-                        <button class="control-btn" id="nextBtn">▶</button>
+                        <button class="control-btn" id="prevBtnSettings">◀</button>
+                        <button class="control-btn play-pause" id="playPauseBtnSettings">❚❚</button>
+                        <button class="control-btn" id="nextBtnSettings">▶</button>
                     </div>
                         <div class="settings-content">
                             <div class="setting-group">
@@ -783,7 +784,6 @@
             constructor() {
                 this.timeElement = document.getElementById('time');
                 this.dateElement = document.getElementById('date');
-                this.emojiImage = document.getElementById('emojiImage');
                 
                 // 表盘指针元素
                 this.hourHand = document.getElementById('hourHand');
@@ -874,11 +874,6 @@
             }
 
             playEmoji() {
-                // 重置并重新触发动画
-                this.emojiImage.style.animation = 'none';
-                this.emojiImage.offsetHeight; // 触发重排
-                this.emojiImage.style.animation = 'emojiFloat 3s ease-in-out infinite';
-                
                 // 创建播放特效（简化版，每4秒一次）
                 this.createPlayEffect();
             }
@@ -890,7 +885,9 @@
                 this.closeSettings.addEventListener('click', () => this.closeSettingsPanel());
                 
                 // 绑定设置面板中的控制按钮
-                this.playPauseBtn.addEventListener('click', () => this.togglePlayPause());
+                document.getElementById('prevBtnSettings').addEventListener('click', () => this.showPrevious());
+                document.getElementById('nextBtnSettings').addEventListener('click', () => this.showNext());
+                document.getElementById('playPauseBtnSettings').addEventListener('click', () => this.togglePlayPause());
                 this.prevBtn.addEventListener('click', () => this.showPrevious());
                 this.nextBtn.addEventListener('click', () => this.showNext());
                 
